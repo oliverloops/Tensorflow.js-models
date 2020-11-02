@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Detección de Objetos en TensorFlow.js</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS styles -->
+    <link rel="stylesheet" href="style.css">
+  </head>  
+  <body>
+    <h1>Detección de algunos objetos con TensorFlow.js </h1> 
+    <section id="demos" class="invisible">
+
+      <p>
+          Mantenga algún objeto cerca de la webcam
+          para obtener una clasificación en tiempo real,
+          luego haz click en "Habilitar Webcam" para comenzar. 🔥😺
+      </p>
+      
+      <div id="liveView" class="camView">
+        <button id="webcamButton">Habilitar Webcam</button>
+        <video id="webcam" autoplay width="640" height="480"></video>
+      </div>
+    </section>
+
+    <!-- Tensorflow.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js" type="text/javascript"></script>
+    <!-- coco-ssd model -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
+    
+    <!-- Nuestro script-->
+    <script src="objects-detector.js" defer></script>
+  </body>
+</html>

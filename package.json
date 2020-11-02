@@ -10,6 +10,7 @@
   "author": "oliverloops",
   "license": "ISC",
   "dependencies": {
+    "@tensorflow-models/coco-ssd": "^2.1.0",
     "@tensorflow-models/mobilenet": "^2.0.4",
     "@tensorflow/tfjs": "^2.7.0"
   },

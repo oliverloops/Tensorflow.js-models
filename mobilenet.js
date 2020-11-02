@@ -34,7 +34,8 @@ async function app() {
     document.getElementById('class-a').addEventListener('click', () => addExample(0));
     document.getElementById('class-b').addEventListener('click', () => addExample(1));
     document.getElementById('class-c').addEventListener('click', () => addExample(2));
-  
+    document.getElementById('class-d').addEventListener('click', () => addExample(3));
+
     while (true) {
       if (classifier.getNumClasses() > 0) {
         const img = await webcam.capture();
@@ -44,7 +45,7 @@ async function app() {
         // Get the most likely class and confidence from the classifier module.
         const result = await classifier.predictClass(activation);
   
-        const classes = ['A', 'B', 'C'];
+        const classes = ['A', 'B', 'C', 'D'];
         document.getElementById('console').innerText = `
           prediction: ${classes[result.label]}\n
           probability: ${result.confidences[result.label]}
